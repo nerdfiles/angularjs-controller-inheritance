@@ -1,15 +1,11 @@
-/*global
-  angular: false
-*/
+(() ->
+  'use strict'
 
-(function () {
-  'use strict';
+  # Create the example application AngularJS module.
+  inheritance = angular.module 'inheritance', []
 
-  // Create the example application AngularJS module.
-  var inheritance = angular.module('inheritance', []);
-
-  // Use the config function to set up routes.
-  inheritance.config(function ($routeProvider) {
+  # Use the config function to set up routes.
+  inheritance.config(($routeProvider) ->
     $routeProvider
       .when('/home', {
         templateUrl: '/partial/home.html'
@@ -32,19 +28,17 @@
       })
       .otherwise({
         redirectTo: '/home'
-      });
-  });
+      })
+  )
 
-  // Add a prototypical inheritance function. Note that this will need es5-sham
-  // in older browsers to provide Object.create().
-  inheritance.inherits = function (ctor, superCtor) {
-    ctor.super_ = superCtor;
-    ctor.prototype = Object.create(superCtor.prototype, {
+  # Add a prototypical inheritance function. Note that this will need es5-sham
+  # in older browsers to provide Object.create().
+  inheritance.inherits = (ctor, superCtor) ->
+    ctor.super_ = superCtor
+    ctor.prototype = Object.create superCtor.prototype, {
       constructor: {
         value: ctor,
         enumerable: false
       }
-    });
-  };
-
-})();
+    }
+)()
