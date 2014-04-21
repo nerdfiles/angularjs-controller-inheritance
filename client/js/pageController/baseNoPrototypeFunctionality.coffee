@@ -25,5 +25,5 @@
 
     @initialize()
 
-  inheritance.BaseNoPrototypeFunctionalityControllerConstructor = BaseNoPrototypeFunctionalityController;
-})()
+  inheritance.BaseNoPrototypeFunctionalityControllerConstructor = BaseNoPrototypeFunctionalityController
+)()

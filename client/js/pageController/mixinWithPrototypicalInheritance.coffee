@@ -19,7 +19,8 @@
     inheritance.BaseMixinControllerConstructor.call @, $scope
 
   # See /js/app.js for the definition of inheritance.inherits().
-  inheritance.inherits MixinWithPrototypicalInheritanceController, inheritance.InheritPrototypicallyControllerConstructor
+  inheritance.inherits MixinWithPrototypicalInheritanceController,
+    inheritance.InheritPrototypicallyControllerConstructor
   p = MixinWithPrototypicalInheritanceController.prototype
 
   # Add the mixin prototype functionality to the ChildController prototype,
