@@ -8,7 +8,7 @@
 
   # A child controller that inherits from multiple parents via prototypical
   # inheritance for the main parent and then the addition of a mixin.
-  MixinWithPrototypicalInheritanceController ($scope) ->
+  MixinWithPrototypicalInheritanceController = ($scope) ->
     # We can avoid passing long argument lists explicitly by suitably ordering
     # the injected dependencies. This is pleasant when the number of services
     # starts growing.

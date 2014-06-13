@@ -10,7 +10,7 @@
   #
   # Note that prototype functions are not inherited if using the $injector
   # method of controller inheritance.
-  BaseMixinController ($scope) ->
+  BaseMixinController = ($scope) ->
     $scope.mixinControllerNames = $scope.mixinControllerNames || []
     $scope.mixinControllerNames.push 'baseMixinController'
   p = BaseMixinController.prototype

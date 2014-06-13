@@ -14,7 +14,7 @@
   # parent controller function. i.e.:
   #
   # this.fn = this.fn || function () {};
-  BaseNoPrototypeFunctionalityController ($scope) ->
+  BaseNoPrototypeFunctionalityController = ($scope) ->
     # Set the controller name in the scope.
     @setControllerName = @setControllerName || () ->
       $scope.controllerName = 'alphaController'

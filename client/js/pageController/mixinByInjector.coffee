@@ -8,7 +8,7 @@
 
   # A child controller that inherits from multiple parents via the $injector
   # method.
-  MixinByInjectorController ($injector, $scope) ->
+  MixinByInjectorController = ($injector, $scope) ->
     # Override a parent controller function. We have to do this before calling
     # $injector.invoke(). But leave it open to further overriding by child
     # classes.

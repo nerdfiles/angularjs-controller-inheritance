@@ -7,7 +7,7 @@
 
   # A child controller that inherits the functionality of a parent via standard
   # Javascript prototypical inheritance.
-  InheritPrototypicallyController ($scope) ->
+  InheritPrototypicallyController = ($scope) ->
     # We can avoid passing long argument lists explicitly by suitably ordering
     # the injected dependencies. This is pleasant when the number of services
     # starts growing.

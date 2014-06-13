@@ -8,7 +8,7 @@
 
   # An "abstract" base controller function that defines functionality in
   # its prototype rather than in the function body.
-  BasePrototypeFunctionalityController ($scope) ->
+  BasePrototypeFunctionalityController = ($scope) ->
     @$scope = $scope
     @initialize()
   p = BasePrototypeFunctionalityController.prototype
